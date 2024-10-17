@@ -1,9 +1,6 @@
 .nav-bar{
     @apply bg-black flex flex-row h-[80px];
-    .buttons-container{
-        align-self: center;
-        margin-left: auto;
-    }
+    justify-content: flex-end;
     .nav-button{
         text-align: center;
         color: white;
