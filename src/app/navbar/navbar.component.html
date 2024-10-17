@@ -1,6 +1,11 @@
-<div class="nav-bar">
-        <h2 class="nav-button">{{navButton.about}}</h2>
-        <h2 class="nav-button">{{navButton.education}}</h2>
-        <h2 class="nav-button">{{navButton.experience}}</h2>
-        <h2 class="nav-button">{{navButton.contact}}</h2>
+<div class="flex flex-row bg-black">
+        <div class="nav-bar home flex-1">
+                <fa-icon class="home-button" [icon]="faHomeIcon"></fa-icon>
+        </div>
+        <div class="nav-bar">
+                <h2 class="nav-button">{{navButton.about}}</h2>
+                <h2 class="nav-button">{{navButton.education}}</h2>
+                <h2 class="nav-button">{{navButton.experience}}</h2>
+                <h2 (click)="reRoute(navButton.contact)" class="nav-button">{{navButton.contact}}</h2>
+        </div>
 </div>
