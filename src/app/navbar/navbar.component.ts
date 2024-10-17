@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ResolveEnd, Router } from '@angular/router';
 import { faHome } from '@fortawesome/free-solid-svg-icons';
+import { RouterServiceService } from '../services/router-service.service';
 
 @Component({
   selector: 'app-navbar',
@@ -11,14 +12,12 @@ export class NavbarComponent {
   public navButton = navButtons;
   public faHomeIcon = faHome;
 
-  constructor(private router: Router){
+  constructor(private router: Router, private routerService: RouterServiceService){
   }
 
   public ngOnInit(): void {
-    this.router.events.subscribe((val) => {
-      if (val instanceof ResolveEnd) {  
+    this.routerService.newRouteDetected.subscribe((val) => {
         console.log(val)
-      }
     })
   }
 
