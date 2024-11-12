@@ -23,5 +23,19 @@
                 }
             }
         }
+        .title{
+            @apply text-white font-bold text-[25px] mt-[20px] transition-colors duration-500;
+            &:hover{
+                cursor: pointer;
+                .gradient{
+                    background: linear-gradient(311deg, #8600ff 19%, #b860ff 44%, #c5004f 82%);
+                    color: transparent;
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    text-fill-color: transparent;
+                }
+            }
+        }
     }
 }
