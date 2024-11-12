@@ -1,6 +1,6 @@
 <div class="nav-bar-container flex flex-row bg-black">
         <div class="nav-bar home flex-1">
-                <fa-icon (click)="navigate(navButton.home)" class="home-button" [ngClass]="{'active' : currentRoute==='welcome'}" [icon]="faHomeIcon"></fa-icon>
+                <fa-icon (click)="navigate(navButton.home)" class="home-button" [ngClass]="{'active' : currentRoute==='welcome'|| currentRoute===''}" [icon]="faHomeIcon"></fa-icon>
         </div>
         <div class="nav-bar">
                 <h2 (click)="navigate(navButton.about)" class="nav-button" [ngClass]="{'active' : currentRoute==='about'}">{{navButton.about}}</h2>
