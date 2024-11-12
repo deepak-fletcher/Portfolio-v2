@@ -3,9 +3,9 @@
                 <fa-icon class="home-button" [icon]="faHomeIcon"></fa-icon>
         </div>
         <div class="nav-bar">
-                <h2 (click)="navigate(navButton.about)" class="nav-button">{{navButton.about}}</h2>
-                <h2 (click)="navigate(navButton.education)" class="nav-button">{{navButton.education}}</h2>
-                <h2 (click)="navigate(navButton.experience)" class="nav-button">{{navButton.experience}}</h2>
-                <h2 (click)="navigate(navButton.contact)" class="nav-button">{{navButton.contact}}</h2>
+                <h2 (click)="navigate(navButton.about)" class="nav-button" [ngClass]="{'active' : currentRoute==='about'}">{{navButton.about}}</h2>
+                <h2 (click)="navigate(navButton.education)" class="nav-button"  [ngClass]="{'active' : currentRoute==='education'}">{{navButton.education}}</h2>
+                <h2 (click)="navigate(navButton.experience)" class="nav-button" [ngClass]="{'active' : currentRoute==='experience'}">{{navButton.experience}}</h2>
+                <h2 (click)="navigate(navButton.contact)" class="nav-button" [ngClass]="{'active' : currentRoute==='contact'}">{{navButton.contact}}</h2>
         </div>
 </div>

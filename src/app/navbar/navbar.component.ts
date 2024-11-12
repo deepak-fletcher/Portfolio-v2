@@ -11,6 +11,7 @@ import { RouterServiceService } from '../services/router-service.service';
 export class NavbarComponent {
   public navButton = navButtons;
   public faHomeIcon = faHome;
+  public currentRoute = '';
 
   constructor(
     private router: Router,
@@ -19,7 +20,7 @@ export class NavbarComponent {
 
   public ngOnInit(): void {
     this.routerService.newRouteDetected.subscribe((val) => {
-      console.log(val);
+      this.currentRoute = val.slice(1);
     });
   }
 
