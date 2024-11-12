@@ -1,41 +1,54 @@
-.landing-page{
-    height:calc( 100vh - 80px );
-    width: 100%;
-    background-color: black;
-    padding-top: 25px;
-    .image-container{
-        margin-top: 20px;
-        justify-content: center;
-        justify-items: center;
-        .image-shell{
-            width: fit-content;
-            opacity: 0;
-            @apply transition-opacity duration-300 ease-linear;
-            &.show-bitmoji{
-                @apply bg-white rounded-full p-5 opacity-100;
-                box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.8);
-            }
-            .bitmoji{
-                opacity: 0;
-                @apply transition-opacity duration-700 ease-out w-[200px] md:w-[300px];
-                &.show-bitmoji{
-                    opacity: 100;
-                }
-            }
+.landing-page {
+  height: calc(100vh - 80px);
+  width: 100%;
+  background-color: black;
+  padding-top: 25px;
+  .image-container {
+    margin-top: 20px;
+    justify-content: center;
+    justify-items: center;
+    .image-shell {
+      width: fit-content;
+      opacity: 0;
+      @apply transition-opacity duration-300 ease-linear;
+      &.show-bitmoji {
+        @apply bg-white rounded-full p-5 opacity-100;
+        box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.8);
+      }
+      .bitmoji {
+        opacity: 0;
+        @apply transition-opacity duration-700 ease-out w-[200px] md:w-[300px];
+        &.show-bitmoji {
+          opacity: 100;
         }
-        .title{
-            @apply text-white font-bold text-[25px] mt-[20px] transition-colors duration-500;
-            &:hover{
-                cursor: pointer;
-                .gradient{
-                    background: linear-gradient(311deg, #8600ff 19%, #b860ff 44%, #c5004f 82%);
-                    color: transparent;
-                    -webkit-background-clip: text;
-                    background-clip: text;
-                    -webkit-text-fill-color: transparent;
-                    text-fill-color: transparent;
-                }
-            }
-        }
+      }
     }
+    .title {
+      @apply text-white font-bold text-[25px] mt-[20px] transition-colors duration-500;
+      animation: reveal-text 1s;
+      cursor: pointer;
+      .gradient {
+        background: linear-gradient(
+          311deg,
+          #8600ff 19%,
+          #b860ff 44%,
+          #c5004f 82%
+        );
+        color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-fill-color: transparent;
+      }
+    }
+  }
+}
+
+@keyframes reveal-text {
+  from {
+    scale: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
