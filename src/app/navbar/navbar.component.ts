@@ -38,6 +38,9 @@ export class NavbarComponent {
       case navButtons.education:
         this.router.navigate(['/education']);
         break;
+      case navButtons.home:
+        this.router.navigate(['/welcome']);
+        break;
     }
   }
 }
@@ -47,4 +50,5 @@ export enum navButtons {
   education = 'Education',
   experience = 'Experience',
   contact = 'Contact',
+  home = 'Home',
 }
