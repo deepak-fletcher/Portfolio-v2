@@ -7,13 +7,19 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ContactMeComponent } from './contact-me/contact-me.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { AboutComponent } from './about/about.component';
+import { EducationComponent } from './education/education.component';
+import { ExperienceComponent } from './experience/experience.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingPageComponent,
     NavbarComponent,
-    ContactMeComponent
+    ContactMeComponent,
+    AboutComponent,
+    EducationComponent,
+    ExperienceComponent
   ],
   imports: [
     BrowserModule,
