@@ -5,8 +5,7 @@
   padding-top: 25px;
   .image-container {
     margin-top: 20px;
-    justify-content: center;
-    justify-items: center;
+    @apply flex flex-col justify-center items-center;
     .image-shell {
       width: fit-content;
       opacity: 0;
