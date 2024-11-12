@@ -7,11 +7,20 @@
         justify-content: center;
         justify-items: center;
         .image-shell{
-            @apply bg-white rounded-full p-5 opacity-100;
             width: fit-content;
-            box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.8);
+            opacity: 0;
+            @apply transition-opacity duration-500 ease-in;
+            &.show-bitmoji{
+                @apply bg-white rounded-full p-5 opacity-100;
+                box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.8);
+            }
             .bitmoji{
                 max-width: 300px;
+                opacity: 0;
+                @apply transition-opacity duration-500 ease-in;
+                &.show-bitmoji{
+                    opacity: 100;
+                }
             }
         }
     }
