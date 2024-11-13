@@ -1,9 +1,10 @@
 <div class="landing-page">
   <div class="image-container">
-    <div class="image-shell" [ngClass]="{'show-bitmoji': this.showBitmoji}">
-    <img class="bitmoji" alt="bitmoji" [ngClass]="{'show-bitmoji': this.showBitmoji}" src="../../assets/bitmoji.png">
+    <div class="image-shell"  (mouseenter)="hovering()" (mouseleave)="hoveringComplete()" (click)="showMore()"  [ngClass]="{'show-bitmoji': this.showBitmoji}" [ngStyle]="{'pointer-events': disablePointerevents? 'none': ''}">
+    <img class="bitmoji" *ngIf="!hoveringBitmoji" alt="bitmoji" [ngClass]="{'show-bitmoji': this.showBitmoji}" src={{bitmojiPath}}>
+    <p class="flex flex-wrap justify-center items-center cursor-pointer" *ngIf="hoveringBitmoji">Click here!</p>
     </div>
-    <div *ngIf="this.showBitmoji">
+    <div *ngIf="this.showName">
       <h1 class="title">Hi, I am <span class="gradient">Deepak Rao Fletcher.</span></h1>
     </div>
   </div>
