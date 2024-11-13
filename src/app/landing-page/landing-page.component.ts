@@ -9,7 +9,6 @@ export class LandingPageComponent implements AfterViewInit {
   public showBitmoji = false;
   public showName = false;
   public showMoreInfo = false;
-  public hoveringBitmoji = false;
   public disablePointerevents = false;
   public hoveringTimer: any;
   public bitmojiPath = "../../assets/bitmoji.png"
@@ -21,32 +20,21 @@ export class LandingPageComponent implements AfterViewInit {
     })
   }
 
-  public hovering(){
-    this.hoveringTimer = setTimeout(()=>{
-      this.hoveringBitmoji = true;
-    }, 700)
-  }
-
-  public hoveringComplete(){
-    clearTimeout(this.hoveringTimer);
-    this.hoveringBitmoji = false;
-    this.showBitmoji = false;
-    setTimeout(()=>{
-      this.showBitmoji = true;
-    })
-  }
-
   public showMore(){
+    this.showBitmoji = false;
     this.disablePointerevents = true;
-    if(this.showMoreInfo){
-      this.showMoreInfo = false;
-      this.bitmojiPath = "../../assets/bitmoji.png"
-    }else{
-      this.showMoreInfo = true;
-      this.bitmojiPath = "../../assets/professionalBitmoji.png"
-    }
     setTimeout(()=>{
-      this.disablePointerevents = false;
+      if(this.showMoreInfo){
+        this.showMoreInfo = false;
+        this.bitmojiPath = "../../assets/bitmoji.png"
+      }else{
+        this.showMoreInfo = true;
+        this.bitmojiPath = "../../assets/professionalBitmoji.png"
+      }
+    }, 500)
+    setTimeout(()=>{
+      this.disablePointerevents = false;;
+      this.showBitmoji = true;
     }, 1000)
   }
 }

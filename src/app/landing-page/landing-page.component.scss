@@ -19,9 +19,6 @@
         @apply transition-opacity duration-700 ease-out w-[200px] md:w-[300px];
         &.show-bitmoji {
           opacity: 100;
-          &:hover{
-            @apply opacity-0;
-        }
         }
       }
     }
