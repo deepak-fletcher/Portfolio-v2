@@ -2,9 +2,9 @@
   height: calc(100vh - 80px);
   width: 100%;
   background-color: black;
-  padding-top: 25px;
   .image-container {
-    height: 100%;
+    height: calc(100vh - 80px);
+    overflow: auto;
     @apply flex flex-col justify-center items-center;
     .image-shell {
       opacity: 0;
@@ -21,6 +21,11 @@
           opacity: 100;
         }
       }
+    }
+    .paragraph{
+      @apply text-white font-bold text-[15px] mt-[20px] transition-colors duration-500;
+      animation: reveal-text 1s;
+      cursor: pointer;
     }
     .title {
       @apply text-white font-bold text-[25px] mt-[20px] transition-colors duration-500;

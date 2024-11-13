@@ -3,8 +3,18 @@
     <div class="image-shell" (click)="showMore()"  [ngClass]="{'show-bitmoji': this.showBitmoji}" [ngStyle]="{'pointer-events': disablePointerevents? 'none': ''}">
     <img class="bitmoji" alt="bitmoji" [ngClass]="{'show-bitmoji': this.showBitmoji}" src={{bitmojiPath}}>
     </div>
-    <div *ngIf="this.showName">
-      <h1 class="title">Hi, I am <span class="gradient">Deepak Rao Fletcher.</span></h1>
+    <div *ngIf="this.showName" class="flex flex-col justify-center items-center">
+      <h1  *ngIf="!showMoreInfo" class="title">Hi, I am <span class="gradient">Deepak Rao Fletcher.</span></h1>
+      <p *ngIf="showMoreInfo" class="paragraph w-[80%] overflow-auto max-h-[100%]">
+      <span class="flex justify-center items-center">
+        Hi, I'm Deepak
+      </span>
+        <br/>
+        With 3 years of experience crafting jaw-dropping UIs, I transform ideas into visually stunning realities that leave users in awe. 
+        <br/>
+        <br/>
+        As a Front-End Developer, I harness the power of Angular and React to design interfaces that are not only beautiful but also drive innovation and enhance user experiences. Let's make the digital world a more
+      </p>
     </div>
   </div>
 </div>
