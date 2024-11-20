@@ -3,7 +3,11 @@
     @apply bg-black flex flex-row h-[80px];  
     border-bottom: 1px rgba(255, 255, 255, 0.233) solid;
     justify-content: flex-end;
+    &.button{
+      @apply bg-black md:flex flex-row h-[80px] hidden;  
+    }
     &.home {
+      @apply hidden md:flex flex-1;
       justify-content: flex-start !important;
       .home-button {
         @apply text-white;
@@ -17,6 +21,16 @@
         &.active{
           border-bottom: 2px white solid;
         }
+      }
+    }
+    &.hamburger{
+      @apply md:hidden flex flex-1;
+      justify-content: flex-start !important;
+      .hamburger-button {
+        @apply text-white;
+        align-self: center;
+        margin-left: 30px;
+        scale: 1.7;
       }
     }
     .nav-button {

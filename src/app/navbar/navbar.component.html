@@ -1,11 +1,14 @@
 <div class="nav-bar-container flex flex-row bg-black">
-        <div class="nav-bar home flex-1">
+        <div class="nav-bar home">
                 <fa-icon (click)="navigate(navButton.home)" class="home-button" [ngClass]="{'active' : currentRoute==='welcome'|| currentRoute===''}" [icon]="faHomeIcon"></fa-icon>
         </div>
-        <div class="nav-bar">
+        <div class="nav-bar button">
                 <h2 (click)="navigate(navButton.about)" class="nav-button" [ngClass]="{'active' : currentRoute==='about'}">{{navButton.about}}</h2>
                 <h2 (click)="navigate(navButton.education)" class="nav-button"  [ngClass]="{'active' : currentRoute==='education'}">{{navButton.education}}</h2>
                 <h2 (click)="navigate(navButton.experience)" class="nav-button" [ngClass]="{'active' : currentRoute==='experience'}">{{navButton.experience}}</h2>
                 <h2 (click)="navigate(navButton.contact)" class="nav-button" [ngClass]="{'active' : currentRoute==='contact'}">{{navButton.contact}}</h2>
+        </div>
+        <div class="nav-bar hamburger">
+                <fa-icon (click)="navigate(navButton.home)" class="hamburger-button" [ngClass]="{'active' : currentRoute==='welcome'|| currentRoute===''}" [icon]="faBarsIcon"></fa-icon>
         </div>
 </div>

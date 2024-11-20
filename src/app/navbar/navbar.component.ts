@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ResolveEnd, Router } from '@angular/router';
-import { faHome } from '@fortawesome/free-solid-svg-icons';
+import { faHome, faBars } from '@fortawesome/free-solid-svg-icons';
 import { RouterServiceService } from '../services/router-service.service';
 
 @Component({
@@ -11,6 +11,7 @@ import { RouterServiceService } from '../services/router-service.service';
 export class NavbarComponent {
   public navButton = navButtons;
   public faHomeIcon = faHome;
+  public faBarsIcon = faBars;
   public currentRoute = '';
 
   constructor(
