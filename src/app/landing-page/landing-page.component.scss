@@ -28,7 +28,7 @@
       cursor: pointer;
     }
     .title {
-      @apply text-white font-bold text-[25px] mt-[20px] transition-colors duration-500;
+      @apply text-white font-bold text-[20px] mt-[20px] transition-colors duration-500;
       animation: reveal-text 1s;
       cursor: pointer;
       .gradient {
