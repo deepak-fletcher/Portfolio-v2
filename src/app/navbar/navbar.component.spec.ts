@@ -50,5 +50,29 @@ describe('NavbarComponent', () => {
       tick();
       expect((router as any).navigate).toHaveBeenCalledWith(['/contact']);
     })));
+    it('to the about page', fakeAsync(inject([Router], (router: RouterServiceStub) => {
+      spyOn(router as any, 'navigate');
+      component.navigate(navButtons.about);
+      tick();
+      expect((router as any).navigate).toHaveBeenCalledWith(['/about']);
+    })));
+    it('to the experience page', fakeAsync(inject([Router], (router: RouterServiceStub) => {
+      spyOn(router as any, 'navigate');
+      component.navigate(navButtons.experience);
+      tick();
+      expect((router as any).navigate).toHaveBeenCalledWith(['/experience']);
+    })));
+    it('to the education page', fakeAsync(inject([Router], (router: RouterServiceStub) => {
+      spyOn(router as any, 'navigate');
+      component.navigate(navButtons.education);
+      tick();
+      expect((router as any).navigate).toHaveBeenCalledWith(['/education']);
+    })));
+    it('to the welcome page', fakeAsync(inject([Router], (router: RouterServiceStub) => {
+      spyOn(router as any, 'navigate');
+      component.navigate(navButtons.home);
+      tick();
+      expect((router as any).navigate).toHaveBeenCalledWith(['/welcome']);
+    })));
   });
 });
