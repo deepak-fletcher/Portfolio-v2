@@ -11,6 +11,9 @@ import { AboutComponent } from './about/about.component';
 import { EducationComponent } from './education/education.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { NgxTippyModule } from 'ngx-tippy-wrapper';
+import { MobileNavigationComponent } from './shared-components/mobile-navigation/mobile-navigation.component';
+import { MobileNavbarService } from './services/mobile-navbar-service/mobile-navbar.service';
+import { RouterServiceService } from './services/router-service/router-service.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,8 @@ import { NgxTippyModule } from 'ngx-tippy-wrapper';
     ContactMeComponent,
     AboutComponent,
     EducationComponent,
-    ExperienceComponent
+    ExperienceComponent,
+    MobileNavigationComponent,
   ],
   imports: [
     BrowserModule,
@@ -28,7 +32,7 @@ import { NgxTippyModule } from 'ngx-tippy-wrapper';
     FontAwesomeModule,
     NgxTippyModule,
   ],
-  providers: [],
+  providers: [MobileNavbarService, RouterServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { ResolveEnd, Router } from '@angular/router';
-import { faHome, faBars } from '@fortawesome/free-solid-svg-icons';
-import { RouterServiceService } from '../services/router-service.service';
+import { Router } from '@angular/router';
+import { faHome, faBars, faClose } from '@fortawesome/free-solid-svg-icons';
+import { RouterServiceService } from '../services/router-service/router-service.service';
+import { MobileNavbarService } from '../services/mobile-navbar-service/mobile-navbar.service';
 
 @Component({
   selector: 'app-navbar',
@@ -12,17 +13,23 @@ export class NavbarComponent {
   public navButton = navButtons;
   public faHomeIcon = faHome;
   public faBarsIcon = faBars;
+  public faCloseIcon = faClose;
   public currentRoute = '';
+  public menuClosed = true;
 
   constructor(
     private router: Router,
-    private routerService: RouterServiceService
+    private routerService: RouterServiceService,
+    private mobileNavbarService: MobileNavbarService,
   ) {}
 
   public ngOnInit(): void {
     this.routerService.newRouteDetected.subscribe((val) => {
       this.currentRoute = val.slice(1);
     });
+    this.mobileNavbarService.navBarSubject.subscribe((val) => 
+      this.menuClosed = val
+    );
   }
 
   public navigate(toPage: navButtons) {
@@ -44,6 +51,10 @@ export class NavbarComponent {
         break;
     }
   }
+
+  public openNavMenu(){
+    this.mobileNavbarService.toggleNavBar();
+  }
 }
 
 export enum navButtons {
@@ -52,4 +63,5 @@ export enum navButtons {
   experience = 'Experience',
   contact = 'Contact',
   home = 'Home',
+  openMenu = 'OpenMenu'
 }

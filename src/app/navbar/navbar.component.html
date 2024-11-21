@@ -9,6 +9,6 @@
                 <h2 (click)="navigate(navButton.contact)" class="nav-button" [ngClass]="{'active' : currentRoute==='contact'}">{{navButton.contact}}</h2>
         </div>
         <div class="nav-bar hamburger">
-                <fa-icon (click)="navigate(navButton.home)" class="hamburger-button" [ngClass]="{'active' : currentRoute==='welcome'|| currentRoute===''}" [icon]="faBarsIcon"></fa-icon>
+                <fa-icon (click)="openNavMenu()" class="hamburger-button" [icon]="menuClosed? faBarsIcon : faCloseIcon"></fa-icon>
         </div>
 </div>
