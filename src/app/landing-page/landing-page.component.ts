@@ -22,7 +22,11 @@ export class LandingPageComponent implements AfterViewInit {
       this.showBitmoji = true;
       this.showName = true;
     })
-    this.instance = this.tippyService.getInstance('bitmoji-tooltip')
+    this.instance = this.tippyService.getInstance('bitmoji-tooltip');
+    this.tippyToggle();
+  }
+
+  public tippyToggle(){
     setTimeout(()=>{
       this.instance?.show();
       setTimeout(()=>{
@@ -43,6 +47,7 @@ export class LandingPageComponent implements AfterViewInit {
         this.showMoreInfo = true;
         this.bitmojiPath = "../../assets/bitmoji.png"
       }
+      this.tippyToggle()
     }, 500)
     setTimeout(()=>{
       this.disablePointerevents = false;;

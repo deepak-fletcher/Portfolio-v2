@@ -11,6 +11,7 @@ export class TippyService {
     arrow: 'true',
     animation: 'fade',
     duration: [300, 250],
+    touch: 'hold',
   }
 
   constructor() { }
