@@ -3,18 +3,20 @@
     <div class="image-shell" (click)="showMore()"  [ngClass]="{'show-bitmoji': this.showBitmoji}" [ngStyle]="{'pointer-events': disablePointerevents? 'none': ''}">
     <img class="bitmoji" alt="bitmoji" [ngClass]="{'show-bitmoji': this.showBitmoji}" src={{bitmojiPath}}>
     </div>
-    <div *ngIf="this.showName" class="flex flex-col justify-center items-center">
-      <h1  *ngIf="!showMoreInfo" class="title">Hi, I am <span class="gradient">Deepak Rao Fletcher.</span></h1>
-      <p *ngIf="showMoreInfo" class="paragraph w-[70%] xl:w-[60%] overflow-auto max-h-[100%] text-center">
+    <div *ngIf="this.showName" class="flex flex-col justify-center items-center text-center">
+      <h1  *ngIf="showMoreInfo" class="title">Hi, I am <span class="gradient">Deepak Rao Fletcher.</span>
+      </h1>
+      <p *ngIf="showMoreInfo" class="text-white paragraph w-[70%] xl:w-[60%] overflow-auto max-h-[100%] max-w-[700px] min-w-[250px]"><br>When I'm not working, you'll find me snapping photos, gaming, or making videos. I have a serious love for cars and enjoy hitting the road for epic road trips. Traveling and tasting new foods is my jam. I'm always on the lookout for the next adventure.<br><br> Life is one big journey, and I'm all about enjoying every drive, snapshot, and bite along the way.</p>
+      <p *ngIf="!showMoreInfo" class="paragraph w-[70%] xl:w-[60%] overflow-auto max-h-[100%] text-center max-w-[700px] min-w-[250px]">
       <span class="title">
         I'm a <span class="gradient">Front-end Developer</span>
       </span>
       <br/>
         <br/>
-        With 3 years of experience crafting jaw-dropping UIs, I transform ideas into visually stunning realities that leave users in awe. 
+        With 3 years of "professional" experience and a total of 5 years of experience in crafting jaw-dropping UIs, I transform ideas into visually stunning realities that leave users in awe. 
         <br/>
         <br/>
-        As a Front-End Developer, I harness the power of Angular and React to design interfaces that are not only beautiful but also drive innovation and enhance user experiences. Let's make the digital world a more
+        As a Front-End Developer, I harness the power of Angular and React to design interfaces that are not only beautiful but also drive innovation and enhance user experiences. Let's make the digital world a more.
       </p>
     </div>
   </div>

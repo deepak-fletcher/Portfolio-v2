@@ -11,7 +11,7 @@ export class LandingPageComponent implements AfterViewInit {
   public showMoreInfo = false;
   public disablePointerevents = false;
   public hoveringTimer: any;
-  public bitmojiPath = "../../assets/bitmoji.png"
+  public bitmojiPath = "../../assets/professionalBitmoji.png"
 
   ngAfterViewInit(): void {
     setTimeout(()=>{
@@ -26,10 +26,10 @@ export class LandingPageComponent implements AfterViewInit {
     setTimeout(()=>{
       if(this.showMoreInfo){
         this.showMoreInfo = false;
-        this.bitmojiPath = "../../assets/bitmoji.png"
+        this.bitmojiPath = "../../assets/professionalBitmoji.png"
       }else{
         this.showMoreInfo = true;
-        this.bitmojiPath = "../../assets/professionalBitmoji.png"
+        this.bitmojiPath = "../../assets/bitmoji.png"
       }
     }, 500)
     setTimeout(()=>{

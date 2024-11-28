@@ -1,8 +1,8 @@
 .mobile-navbar{
-    height: calc(100% - 83px);
+    height: calc(100% - 80px);
     width: 100%;
     position: absolute;
-    top: 83px;
+    top: 80px;
     background-color: black;
     color: white;
     display: flex;
@@ -13,5 +13,8 @@
         margin: 10px;
         font-size: 20px;
         text-align: center;
+        &:hover{
+            cursor: pointer;
+        }
     }
 }
