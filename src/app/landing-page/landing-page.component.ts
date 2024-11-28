@@ -1,4 +1,5 @@
 import { AfterViewInit, Component } from '@angular/core';
+import { NgxTippyInstance, NgxTippyService } from 'ngx-tippy-wrapper';
 
 @Component({
   selector: 'app-landing-page',
@@ -12,17 +13,28 @@ export class LandingPageComponent implements AfterViewInit {
   public disablePointerevents = false;
   public hoveringTimer: any;
   public bitmojiPath = "../../assets/professionalBitmoji.png"
+  public instance: any;
+
+  constructor(public tippyService: NgxTippyService){}
 
   ngAfterViewInit(): void {
     setTimeout(()=>{
       this.showBitmoji = true;
       this.showName = true;
     })
+    this.instance = this.tippyService.getInstance('bitmoji-tooltip')
+    setTimeout(()=>{
+      this.instance?.show();
+      setTimeout(()=>{
+        this.instance?.hide()
+      }, 5000)
+    }, 2000)
   }
 
   public showMore(){
     this.showBitmoji = false;
     this.disablePointerevents = true;
+    this.instance?.hide()
     setTimeout(()=>{
       if(this.showMoreInfo){
         this.showMoreInfo = false;
