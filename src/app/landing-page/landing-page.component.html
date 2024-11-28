@@ -1,7 +1,7 @@
 <div class="landing-page">
   <div class="image-container">
     <div class="image-shell" (click)="showMore()"  [ngClass]="{'show-bitmoji': this.showBitmoji}" [ngStyle]="{'pointer-events': disablePointerevents? 'none': ''}">
-    <img tippyName="bitmoji-tooltip" ngxTippy="Click to know more!" class="bitmoji" alt="bitmoji" [ngClass]="{'show-bitmoji': this.showBitmoji}" src={{bitmojiPath}}>
+    <img tippyName="bitmoji-tooltip" tippyClassName="bitmoji-tooltip-class{{showMoreInfo? ' lower': ''}}" ngxTippy="Click to know more!" class="bitmoji" alt="bitmoji" [ngClass]="{'show-bitmoji': this.showBitmoji}" src={{bitmojiPath}}>
     </div>
     <div *ngIf="this.showName" class="flex flex-col justify-center items-center text-center">
       <h1  *ngIf="showMoreInfo" class="title">Hi, I am <span class="gradient">Deepak Rao Fletcher.</span>

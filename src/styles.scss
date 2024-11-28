@@ -13,3 +13,17 @@ body {
   padding: 0;
   overflow: hidden;
 }
+
+
+
+.bitmoji-tooltip-class{
+  background-color: #427eff !important;
+  bottom: -40px;
+  border-radius: 30px !important;
+  &.lower{
+    bottom: -75px !important;
+  }
+  .tippy-arrow::before{
+    color: #427eff !important;
+  }
+}
