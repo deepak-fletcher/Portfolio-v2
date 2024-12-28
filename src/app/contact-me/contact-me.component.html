@@ -1,9 +1,15 @@
-<div class="contact-container">
+<div *ngIf="loadingComplete; else loading" class="contact-container">
     <p class="header">Socials</p>
     <div class="socials-container">
-        <img *ngFor="let item of logos, index" [src]= "item">
+        <img *ngFor="let item of logos, let index = index" [src]= "item" (load)="onImageLoad(index)">
     </div>
     <div>
-
     </div>
 </div>
+
+<ng-template #loading>
+    <div class="loading-container">
+      <div class="spinner"></div>
+      <p>Loading...</p>
+    </div>
+</ng-template>
