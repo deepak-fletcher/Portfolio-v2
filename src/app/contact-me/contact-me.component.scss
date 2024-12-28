@@ -8,16 +8,15 @@
         @apply text-3xl font-[500] m-[10px] text-center;
     }
     .socials-container{
-        @apply flex flex-col justify-center items-center p-5 sm:flex-row sm:flex-wrap;
+        @apply flex flex-row justify-center items-center p-5 flex-wrap;
         width: 100%;
         img{
-            @apply m-[25px] md:m-[30px] lg:m-[50px];
-            width: 50px;
+            @apply m-[20px] md:m-[30px] lg:m-[50px];
+            width: 40px;
             position: relative;
             cursor: pointer;
             &:hover{
-                width: 70px;
-                margin: 50px;
+                @apply lg:w-[50px] lg:m-[45px] md:w-[50px] md:m-[25px]
             }
         }
     }

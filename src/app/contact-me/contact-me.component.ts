@@ -10,6 +10,6 @@ export class ContactMeComponent {
     'assets/facebooklogo.png',
     'assets/instagramlogo.png',
     'assets/linkedinlogo.png',
-    'assets/xlogo.webp'
+    'assets/twitterlogo.png'
   ];
 }
