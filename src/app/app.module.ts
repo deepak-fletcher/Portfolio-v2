@@ -14,7 +14,6 @@ import { MobileNavigationComponent } from './shared-components/mobile-navigation
 import { MobileNavbarService } from './services/mobile-navbar-service/mobile-navbar.service';
 import { RouterServiceService } from './services/router-service/router-service.service';
 import { NavbarComponent } from './navbar/navbar.component';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +23,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     EducationComponent,
     ExperienceComponent,
     MobileNavigationComponent,
-    NavbarComponent
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,

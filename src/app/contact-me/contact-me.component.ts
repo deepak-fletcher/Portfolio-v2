@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./contact-me.component.scss']
 })
 export class ContactMeComponent {
-
+  public logos = [
+    'assets/facebooklogo.png',
+    'assets/instagramlogo.png',
+    'assets/linkedinlogo.png',
+    'assets/xlogo.webp'
+  ];
 }

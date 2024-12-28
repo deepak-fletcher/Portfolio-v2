@@ -1,0 +1,24 @@
+.contact-container{
+    height: calc(100% - 80px);
+    width: 100%;
+    background-color: black;
+    color: white;
+    overflow: auto;
+    .header{
+        @apply text-3xl font-[500] m-[10px] text-center;
+    }
+    .socials-container{
+        @apply flex flex-col justify-center items-center p-5 sm:flex-row sm:flex-wrap;
+        width: 100%;
+        img{
+            @apply m-[25px] md:m-[30px] lg:m-[50px];
+            width: 50px;
+            position: relative;
+            cursor: pointer;
+            &:hover{
+                width: 70px;
+                margin: 50px;
+            }
+        }
+    }
+}
