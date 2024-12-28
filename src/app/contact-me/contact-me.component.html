@@ -1,7 +1,7 @@
 <div *ngIf="loadingComplete; else loading" class="contact-container">
     <p class="header">Socials</p>
     <div class="socials-container">
-        <img *ngFor="let item of logos, let index = index" [src]= "item" (load)="onImageLoad(index)">
+        <img *ngFor="let item of logos, let index = index" [src]= "item.location" (load)="onImageLoad(index)" (click)="openLink(item.link)">
     </div>
     <div>
     </div>

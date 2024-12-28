@@ -7,10 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactMeComponent implements OnInit {
   public logos = [
-    'assets/facebooklogo.png',
-    'assets/instagramlogo.png',
-    'assets/linkedinlogo.png',
-    'assets/twitterlogo.png'
+    {location: 'assets/facebooklogo.png', link: 'https://www.facebook.com/deepakrao.fletcher/'}, 
+    {location: 'assets/instagramlogo.png', link: 'https://www.instagram.com/deepak__fletcher/profilecard/?igsh=YWh2MWI1anFvYWdz'},
+    {location: 'assets/linkedinlogo.png', link: 'https://www.linkedin.com/in/deepak-fletcher'},
+    {location: 'assets/twitterlogo.png', link: 'https://x.com/DeepakR03572769?s=09'}
   ];
 
   public loadingComplete = false;
@@ -25,7 +25,7 @@ export class ContactMeComponent implements OnInit {
   private preloadImages(): void {
     this.logos.forEach((logo, index) => {
       const img = new Image();
-      img.src = logo;
+      img.src = logo.location;
       img.onload = () => this.onImageLoad(index);
     });
   }
@@ -34,5 +34,9 @@ export class ContactMeComponent implements OnInit {
     if(position === this.logos.length - 1){
       this.loadingComplete = true;
     }
+  }
+
+  public openLink(url: string){
+    window.open(url, '_blank');
   }
 }
