@@ -1,4 +1,18 @@
 .about-container{
+    .image-container{
+        margin-top: 30px;
+        background-color: white;
+        width: 300px;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 500px;
+        box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.8);
+    }
+    .about-image{
+        max-height: 400px;
+    }
     height: calc(100% - 60px);
     background: black;
     color: white;
