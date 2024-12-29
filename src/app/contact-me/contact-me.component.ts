@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-contact-me',
@@ -14,12 +15,18 @@ export class ContactMeComponent implements OnInit {
   ];
 
   public loadingComplete = false;
+  public details = new FormGroup({
+    name: new FormControl('', [Validators.required]),
+    email: new FormControl('', [Validators.required, Validators.email]),
+    query: new FormControl('', [Validators.required])
+  })
 
   constructor(){
 
   }
   ngOnInit(): void {
     this.preloadImages();
+
   }
 
   private preloadImages(): void {
@@ -34,6 +41,10 @@ export class ContactMeComponent implements OnInit {
     if(position === this.logos.length - 1){
       this.loadingComplete = true;
     }
+  }
+
+  public onSubmit(){
+    console.log(this.details.value)
   }
 
   public openLink(url: string){

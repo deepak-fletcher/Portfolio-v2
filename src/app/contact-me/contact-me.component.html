@@ -1,15 +1,48 @@
 <div *ngIf="loadingComplete; else loading" class="contact-container">
-    <p class="header">Socials</p>
+    <p class="header">Catch me on</p>
     <div class="socials-container">
         <img *ngFor="let item of logos, let index = index" [src]= "item.location" (load)="onImageLoad(index)" (click)="openLink(item.link)">
     </div>
-    <div>
+    <div class="contact-form-container">
+        <p class="header">Contact Me</p>
+        <div>
+            <form class="contact-form" [formGroup]="details" (ngSubmit)="onSubmit()">
+                <div class="h-[80px] flex flex-col justify-start mt-[10px]">
+                    <label class="pl-2 pr-2 text-lg font-bold mt-[15px]">Name:</label>
+                    <input type="text" placeholder="Enter your name" formControlName="name">
+                    <!-- Error message for name field -->
+                    <div class="error-container" *ngIf="details.get('name')?.errors?.['required'] && details.get('name')?.touched" class="text-red-500">
+                    Name is required.
+                    </div>
+                </div>
+                <div class="h-[80px] flex flex-col justify-start mt-[10px]">
+                    <label class="pl-2 pr-2 text-lg font-bold mt-[15px]">Email:</label>
+                    <input type="text" placeholder="Enter your Email" formControlName="email">
+                    <!-- Error messages for email field -->
+                    <div class="error-container" *ngIf="details.get('email')?.errors?.['required'] && details.get('email')?.touched" class="text-red-500">
+                    Email is required.
+                    </div>
+                    <div class="error-container" *ngIf="details.get('email')?.errors?.['email'] && details.get('email')?.touched" class="text-red-500">
+                    Please enter a valid email address.
+                    </div>
+                </div>
+                <div class="h-[155px] flex flex-col justify-start mt-[10px]">
+                    <label class="pl-2 pr-2 text-lg font-bold mt-[15px]">Reason:</label>
+                    <textarea placeholder="Enter your query" formControlName="query"></textarea>
+                    <!-- Error message for query field -->
+                    <div class="error-container" *ngIf="details.get('query')?.errors?.['required'] && details.get('query')?.touched" class="text-red-500">
+                      Reason is required.
+                    </div>
+                </div>
+              <button class="submit-button" type="submit" [disabled]="!details.valid">Submit</button>
+            </form>
+          </div>
+          
     </div>
 </div>
 
 <ng-template #loading>
     <div class="loading-container">
       <div class="spinner"></div>
-      <p>Loading...</p>
     </div>
 </ng-template>

@@ -5,7 +5,7 @@
   background-color: black;
   .image-container {
     cursor: pointer;
-    @apply flex flex-col justify-center items-center mt-[10%] mb-[10%];;
+    @apply flex flex-col justify-center items-center mt-[50px] mb-[30px];;
     .image-shell {
       opacity: 0;
       @apply transition-opacity flex justify-center items-center duration-300 ease-linear w-[250px] md:w-[350px] h-[250px] md:h-[350px];
