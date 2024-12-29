@@ -1,10 +1,10 @@
 .nav-bar-container {
   .nav-bar {
-    @apply bg-black flex flex-row h-[80px];  
+    @apply bg-black flex flex-row h-[60px];  
     border-bottom: 1px rgba(255, 255, 255, 0.233) solid;
     justify-content: flex-end;
     &.button{
-      @apply bg-black md:flex flex-row h-[80px] hidden;  
+      @apply bg-black md:flex flex-row h-[60px] hidden;  
     }
     &.home {
       @apply hidden md:flex flex-1;
