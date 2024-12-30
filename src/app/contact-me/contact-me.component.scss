@@ -81,7 +81,7 @@
     }
   }
 
-  .submit-button{
+  .submit-button, .email-button{
     @apply transition-all duration-300;
     background: #3498db;
     font-weight: 400;
@@ -89,6 +89,8 @@
     height: 40px;
     border-radius: 30px;
     margin-top: 25px;
+    text-align: center;
+    padding: 7px;
     &:hover{
       background: #45b5ff;
       font-weight: 600;

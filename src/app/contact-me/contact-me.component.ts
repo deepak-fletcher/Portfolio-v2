@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { faMessage } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-contact-me',
@@ -13,6 +14,7 @@ export class ContactMeComponent implements OnInit {
     {location: 'assets/linkedinlogo.png', link: 'https://www.linkedin.com/in/deepak-fletcher'},
     {location: 'assets/twitterlogo.png', link: 'https://x.com/DeepakR03572769?s=09'}
   ];
+  public mailIcon = faMessage;
 
   public loadingComplete = false;
   public details = new FormGroup({
